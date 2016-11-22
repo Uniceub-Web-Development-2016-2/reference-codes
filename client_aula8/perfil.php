@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>	
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,9 +23,9 @@
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3>
+		<?php	
+			echo "<h3>Seja bem-vindo, {$_SESSION["name"]} {$_SESSION["email"]}</h3>";
+		?>
 			<div class="btn-group">
 				 
 				<button class="btn btn-default" type="button">
